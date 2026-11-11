@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Minha Lista de Tarefas</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Cliente oficial do Supabase via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- JavaScript da aplicação -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header class="header">
+            <span class="tag">ORGANIZAÇÃO PESSOAL</span>
+
+            <h1>Minha To-Do List</h1>
+
+            <p>Organize suas tarefas em um só lugar.</p>
+        </header>
+
+        <section class="task-card">
+
+            <form id="task-form">
+
+                <label for="task-input">Nova tarefa</label>
+
+                <div class="input-group">
+
+                    <input
+                        type="text"
+                        id="task-input"
+                        placeholder="O que você precisa fazer?"
+                        maxlength="200"
+                        autocomplete="off"
+                        required
+                    >
+
+                    <button type="submit" id="submit-button">
+                        Adicionar
+                    </button>
+
+                </div>
+
+            </form>
+
+            <p id="message" class="message" role="status" aria-live="polite"></p>
+
+            <div class="list-header">
+                <h2>Minhas tarefas</h2>
+                <span id="task-count">0 tarefas</span>
+            </div>
+
+            <ul id="task-list" class="task-list">
+                <li class="empty-state">Carregando tarefas...</li>
+            </ul>
+
+        </section>
+
+        <footer>
+            <p>Desenvolvido com HTML, CSS, JavaScript e Supabase.</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
